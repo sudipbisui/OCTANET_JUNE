@@ -1,0 +1,140 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.task-entry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-entry input, .task-entry select, .task-entry button {
+    margin: 5px 2px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.add-task {
+    background-color: blue;
+    color: white;
+    flex: 1;
+}
+
+#taskInput {
+    flex: 2;
+}
+
+#taskCategory, #taskPriority, #taskDueDate {
+    flex: 1;
+}
+
+.task-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fafafa;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+}
+
+.task-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.task-info span {
+    margin: 2px 0;
+    font-size: 0.9em;
+}
+
+.task-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.delete, button.complete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+button.complete {
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 5px;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.completed .task-info {
+    text-decoration: line-through;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .task-entry, .task-controls {
+        flex-direction: column;
+    }
+}
